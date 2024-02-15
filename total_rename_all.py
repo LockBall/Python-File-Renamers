@@ -15,7 +15,7 @@ def rename_files():
 
         if split_tup[1] == filetype :
 
-            print("filename: ", file)
+            print("original filename: ", file)
 
             new_file = new_filename + str(count) + filetype
             print("new_file: ", new_file)
