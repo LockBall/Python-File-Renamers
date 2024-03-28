@@ -5,7 +5,8 @@ import os
 def rename_files():
     count = 0
     new_filename = "new_filename"
-    filetype = ".png"
+    filetype_1 = ".png"
+    filetype_2 = ".jpg"
     current_directory = os.getcwd()
     print("Renaming files in ", current_directory)
 
@@ -13,11 +14,11 @@ def rename_files():
         split_tup = os.path.splitext(str(file)) # 0 - name, 1 = ext
         # print("split_tup", split_tup)
 
-        if split_tup[1] == filetype :
+        if split_tup[1] == filetype_1 or split_tup[1] == filetype_2:
 
             print("original filename: ", file)
 
-            new_file = new_filename + str(count) + filetype
+            new_file = new_filename + str(count) + filetype_1
             print("new_file: ", new_file)
 
             os.rename(file, new_file)
